@@ -52,6 +52,7 @@ gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpry
 gem 'pry-doc'    # methodを表示
 gem 'pry-stack_explorer' # スタックをたどれる))
 gem 'devise'
+gem 'slim-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
