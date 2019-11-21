@@ -31,5 +31,23 @@ module ShopEventSchedule
     config.generators.system_tests = nil
 
     config.generators.template_engine = :slim
+
+    # 日本語化ファイルの設定
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ja
+    config.i18n.available_locales = %i[ja en]
+
+    ### Railsが表示の際に扱うタイムゾーン ←ココ
+    config.time_zone = 'Tokyo'
+
+    ### Rails(Activerecord)がDBへのRead・Writeを行う際タイムゾーン ←ココ
+    config.active_record.default_timezone = :local
+
+    ### rails g した時、一部ファイルを自動生成しない
+    config.generators do |g|
+      g.assets false
+      g.helper false
+      g.skip_routes true
+    end
   end
 end
