@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Shops::InfosController < Shops::BaseController
   before_action :set_shop, only: %i[edit update]
   def show; end
@@ -21,7 +23,7 @@ class Shops::InfosController < Shops::BaseController
       :name,
       :latitude,
       :longitude,
-      :address,
+      :address
     )
   end
 

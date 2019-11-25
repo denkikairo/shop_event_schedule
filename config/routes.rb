@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   resources :shops, only: %i[index]
 
   namespace :shops do
-		resource :info, only: %i[show edit update]
-	end
+    resource :info, only: %i[show edit update]
+  end
 end
