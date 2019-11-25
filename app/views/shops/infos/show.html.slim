@@ -1,0 +1,22 @@
+- content_for(:html_title, 'Shop Info')
+.container.pt-3
+  .row
+    .col-md-10.offset-md-1
+      h1.float-left.mb-5 Shop Info
+      table.table
+        tr
+          th scope="row"  Email
+          td= current_shop.email
+        tr
+          th scope="row"  Name
+          td= current_shop.name
+        tr
+          th scope="row"  Latitude
+          td= current_shop.latitude
+        tr
+          th scope="row"  Longitude
+          td= current_shop.longitude
+        tr
+          th scope="row"  Address
+          td= current_shop.address
+      = link_to "Edit", edit_shops_info_path, class:"btn btn-success float-right"
