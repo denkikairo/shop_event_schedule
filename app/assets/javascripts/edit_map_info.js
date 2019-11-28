@@ -16,7 +16,7 @@ $(function() {
     }
     console.log(myLatLng)
 
-    var map = new google.maps.Map(document.getElementById('add_map_info'), {
+    var map = new google.maps.Map(document.getElementById('edit_map_info'), {
       zoom: 16,
       center: myLatLng
     });
@@ -70,7 +70,7 @@ $(function() {
     var myLatLng = {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()};
     $('#shop_latitude').val(myLatLng.lat);
     $('#shop_longitude').val(myLatLng.lng);
-    var map = new google.maps.Map(document.getElementById('add_map_info'), {
+    var map = new google.maps.Map(document.getElementById('edit_map_info'), {
       zoom: 16,
       center: myLatLng
     });
