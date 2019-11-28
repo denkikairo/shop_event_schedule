@@ -5,16 +5,12 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # ログイン後のリダイレクト先
   def after_sign_in_path_for(resource_or_scope)
-    if resource_or_scope.is_a?(Shop)
-      if resource_or_scope.latitude.present? && resource_or_scope.longitude.present?
-        shops_info_path
-      else
-        edit_shops_info_path
-      end
-    else
-      root_path
-    end
-  end
+    return root_path if !resource_or_scope.is_a?(Shop)
+		if resource_or_scope.latitude.present? && resource_or_scope.longitude.present?
+			shops_info_path
+		else
+			edit_shops_info_path
+		end
+	end
 end
