@@ -14,3 +14,5 @@
 //= require rails-ujs
 //= require popper
 //= require bootstrap
+//= require underscore
+//= require gmaps/google

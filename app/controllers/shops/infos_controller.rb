@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
 class Shops::InfosController < Shops::BaseController
-  before_action :set_shop, only: %i[edit update]
-  def show; end
+  before_action :set_shop, only: %i[show edit update]
+  def show
+    @hash = Gmaps4rails.build_markers(@shop) do |shop, marker|
+      marker.lat shop.latitude
+      marker.lng shop.longitude
+      marker.infowindow render_to_string(partial: "shops/infowindow", locals: { shop: shop })
+    end
+  end
+
 
   def edit; end
 
