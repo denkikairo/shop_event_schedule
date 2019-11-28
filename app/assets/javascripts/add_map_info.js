@@ -9,7 +9,12 @@ $(function() {
   // initAutocomplete()
   initMap()
   function initMap() {
-    var myLatLng = {lat: 35.681236, lng: 139.767125};
+    if ($('#shop_latitude').val() == ""  || $('#shop_longitude') == "")  {
+      var myLatLng = {lat: 35.681236, lng: 139.767125};
+    } else {
+      var myLatLng = {lat: Number($('#shop_latitude').val()), lng: Number($('#shop_longitude').val())};
+    }
+    console.log(myLatLng)
 
     var map = new google.maps.Map(document.getElementById('add_map_info'), {
       zoom: 16,
