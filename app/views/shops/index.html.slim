@@ -1,0 +1,19 @@
+h1 Listing shops
+table
+  tr
+    th Shop ID
+    th Shop Email
+    th
+    th
+    th
+  - @shops.each do |shop|
+    tr
+      td= shop.id
+      td= shop.email
+br/
+- if shop_signed_in?
+	= link_to "Logout", destroy_shop_session_path, method: :delete
+- else
+	= link_to "Signup", new_shop_registration_path
+	br
+	= link_to "Login", new_shop_session_path
