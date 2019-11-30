@@ -2,6 +2,7 @@
 
 class Shops::InfosController < Shops::BaseController
   before_action :set_shop, only: %i[show edit update]
+
   def show
     @hash = Gmaps4rails.build_markers(@shop) do |shop, marker|
       marker.lat shop.latitude
