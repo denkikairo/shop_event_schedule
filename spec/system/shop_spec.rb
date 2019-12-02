@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Shops', type: :system do
-
   let(:shop) { create(:shop) }
   describe 'サインアップ画面' do
     context '入力値が正常な状態' do
