@@ -8,7 +8,7 @@ RSpec.describe 'Shops', type: :system do
     context '入力値が正常な状態' do
       it 'サインアップが成功すること' do
         visit new_shop_registration_path
-        fill_in 'Email', with: 'example@gmail.com'
+        fill_in 'Email', with: 'example@example.com'
         fill_in 'Password', with: 'password'
         fill_in 'Password confirmation', with: 'password'
         click_button 'Sign up'
