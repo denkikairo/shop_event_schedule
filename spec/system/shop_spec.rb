@@ -13,6 +13,7 @@ RSpec.describe 'Shops', type: :system do
         fill_in 'Password confirmation', with: 'password'
         click_button 'Sign up'
         expect(page).to have_content 'Welcome! You have signed up successfully.'
+        expect(current_path).to eq edit_shops_info_path
       end
     end
   end
@@ -21,6 +22,7 @@ RSpec.describe 'Shops', type: :system do
       it 'ログインが成功すること' do
         login_as(shop)
         expect(page).to have_content 'Signed in successfully.'
+        expect(current_path).to eq shops_info_path
       end
     end
   end
@@ -36,6 +38,7 @@ RSpec.describe 'Shops', type: :system do
         fill_in 'Address', with: shop.address
         click_button 'Update Shop'
         expect(page).to have_content 'Shop info was updated.'
+        expect(current_path).to eq shops_info_path
       end
     end
   end
