@@ -3,9 +3,9 @@ FactoryBot.define do
     email { 'example@example.com' }
     password { 'password' }
     password_confirmation { 'password' }
-    name { 'Apple store 銀座' }
-    latitude { 35.672256 }
-    longitude { 139.76581199999998 }
-    address { '日本、〒104-0061 東京都中央区銀座３丁目５−１２ サヱグサビル 本館' }
+    name { '株式会社スタートアップテクノロジー' }
+    latitude { 35.661731 }
+    longitude { 139.69747600000005 }
+    address { '日本、〒150-0042 東京都渋谷区宇田川町３６ 宇田川町36-6 ワールド宇田川ビル 9F A号' }
   end
 end
