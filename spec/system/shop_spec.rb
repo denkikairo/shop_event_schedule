@@ -2,6 +2,7 @@
 
 require 'rails_helper'
 
+# ShopはDeviceで作成した認証用のモデル
 RSpec.describe 'Shops', type: :system do
   let(:shop) { create(:shop) }
   describe 'サインアップ画面' do
@@ -26,9 +27,9 @@ RSpec.describe 'Shops', type: :system do
       end
     end
   end
-  describe 'ShopInfo編集画面' do
+  describe 'ShopInfo登録（編集画面）' do
     context '入力値が正常な状態' do
-      it 'ShopInfo編集が成功すること' do
+      it 'ShopInfoの更新が成功すること' do
         login_as(shop)
         click_link 'Edit'
         fill_in 'Email', with: shop.email
