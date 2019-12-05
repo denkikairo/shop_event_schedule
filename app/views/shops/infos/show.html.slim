@@ -1,0 +1,32 @@
+- content_for(:html_title, 'Shop Info')
+.container.pt-3
+  .row
+    .col-md-10.offset-md-1
+      h1.float-left.mb-5 Shop Info
+      = link_to 'Edit', edit_shops_info_path, class:'btn btn-success float-right mt-3'
+      table.table.mb-3
+        tr
+          th scope='row' Email
+          td= current_shop.email
+        tr
+          th scope='row' Name
+          td= current_shop.name
+        tr
+          th scope='row' Latitude
+          td = current_shop.latitude
+        tr
+          th scope='row' Longitude
+          td = current_shop.longitude
+        tr
+          th scope='row' Address
+          td= current_shop.address
+      #map.mb-3 style='width: 800px; height: 400px;'
+
+      javascript:
+        handler = Gmaps.build('Google');
+        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+          markers = handler.addMarkers(#{raw @hash.to_json});
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+          handler.getMap().setZoom(16);
+        });

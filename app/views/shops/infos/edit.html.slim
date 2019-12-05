@@ -1,0 +1,26 @@
+.container
+  .row
+    .col-md-10.offset-md-1
+      h1 Edit shop info
+      = javascript_include_tag 'edit_map_info.js'
+      input#autocomplete.mb-3 type='text' /
+      #edit_map_info.mb-3 style='width: 800px; height: 400px;', class:'mb-3'
+      = form_with model: @shop, url: shops_info_path, local: true do |f|
+        = render 'devise/shared/error_messages', resource: f.object
+        .form-group
+          = f.label :email
+          = f.email_field :email, class:'form-control mb-3'
+        .form-group
+          = f.label :name
+          = f.text_field :name, class:'form-control mb-3'
+        .form-group
+            = f.label :latitude
+            = f.text_field :latitude, class:'form-control mb-3'
+        .form-group
+          = f.label :longitude
+          = f.text_field :longitude, class:'form-control mb-3'
+        .form-group
+          = f.label :address
+          = f.text_field :address, class:'form-control mb-3'
+        .actions
+          = f.submit class: 'btn btn-primary mb-3'

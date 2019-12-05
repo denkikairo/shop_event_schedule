@@ -44,6 +44,7 @@ gem 'draper'
 gem 'enum_help'
 gem 'exception_notification', github: 'smartinez87/exception_notification'
 gem 'font-awesome-sass', '~> 5.2.0'
+gem 'gmaps4rails'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pry-byebug'
@@ -60,6 +61,12 @@ gem 'sorcery'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'heavens_door'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
 end
 
 group :development do
