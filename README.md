@@ -33,7 +33,7 @@
 - google Maps JavaScript API
 - google places API
 
-## API仕様の手順
+## API利用の手順
 Google Map Platformにアクセスし、アカウント登録し、請求情報を入力する。  
 請求情報が入力と共にAPIキーが発行される。  
 htmlにGoogle Maps用のScriptを読み込むコードを記入する。  
