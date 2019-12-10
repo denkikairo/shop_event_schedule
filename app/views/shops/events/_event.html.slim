@@ -1,0 +1,5 @@
+tr
+  th scope="row" = event.id
+  td= link_to event.title, shops_event_path(event)
+  td = l(event.start_time, format: :short)
+  td = l(event.end_time, format: :short)

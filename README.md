@@ -1,24 +1,41 @@
-# README
+# MTGドラフトをやろう
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サービス概要
+カードゲームのマジックザギャザリング（MTG)のイベントスケジュールを
+カードショップごとにチェックできるアプリです。
 
-Things you may want to cover:
+※ドラフトとはカードを持っていなくてもカードショップに集まった
+不特定多数（４〜８人）でゲームができる麻雀的なゲームのルールです。
 
-* Ruby version
+## 登場人物
 
-* System dependencies
+### エンドユーザー
+- カードゲームのイベントに参加したい人
+- イベントを主催するカードショップ
 
-* Configuration
+### 管理者
+- エンドユーザーの情報を管理する人
 
-* Database creation
+## 問題
+イベントに参加したいユーザーにとって、ショップごとのイベントスケジュールを把握しづらい。  
+現状では、ショップごとのブログ、twitterの投稿などを確認する必要がある。
 
-* Database initialization
+## 解決方法
+カードショップにイベント情報を登録してもらい、ユーザーがショップごとのイベント情報を簡単に一覧できるようにする。 
 
-* How to run the test suite
+## プロダクト
+マジックザギャザリングのイベント開催情報をチェックできるスケジュール管理アプリ
 
-* Services (job queues, cache servers, search engines, etc.)
+## マーケット
+カードを持っていないが、近場のショップにふらっと立ち寄り、ドラフトイベントに参加したい人
 
-* Deployment instructions
+## 使用するAPI
+- google Maps JavaScript API
+- google places API
 
-* ...
+## API利用の手順
+Google Map Platformにアクセスし、アカウント登録し、請求情報を入力する。  
+請求情報が入力と共にAPIキーが発行される。  
+htmlにGoogle Maps用のScriptを読み込むコードを記入する。  
+そのコードに key={APIキー}を追加する。
+

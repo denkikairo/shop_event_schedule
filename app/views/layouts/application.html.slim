@@ -7,9 +7,21 @@ html
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    script src="//maps.google.com/maps/api/js?v=3.38&key=#{Rails.application.credentials[:google_api_key]}&libraries=places"
-    script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"
+    script src='//maps.google.com/maps/api/js?v=3.38&key=#{Rails.application.credentials[:google_api_key]}&libraries=places'
+    script src='//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js'
     script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'
   body
     = render 'shared/flash_messages'
     = yield
+    /! Modal
+    #exampleModal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1"
+      .modal-dialog role="document"
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title
+            button.close aria-label="Close" data-dismiss="modal" type="button"
+              span aria-hidden="true"  ×
+          #exampleBody.modal-body
+            | \...
+          .modal-footer
+            button.btn.btn-secondary data-dismiss="modal" type="button"  Close

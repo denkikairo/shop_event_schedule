@@ -2,7 +2,7 @@
 .container.pt-3
   .row
     .col-md-10.offset-md-1
-      h1.float-left.mb-5 Shop Info
+      h1.float-left.mb-5 Event Info
       /= link_to "Edit", shops_events_path, class:"btn btn-success float-right mt-3"
       table.table.mb-3
         tr
@@ -10,7 +10,7 @@
           td= @event.title
         tr
           th scope="row" Start Time
-          td= @event.start_time
+          td = l(@event.start_time, format: :short)
         tr
           th scope="row" End Time
-          td = @event.end_time
+          td = l(@event.end_time, format: :short)

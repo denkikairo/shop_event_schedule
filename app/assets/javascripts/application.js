@@ -16,3 +16,6 @@
 //= require bootstrap
 //= require underscore
 //= require gmaps/google
+//= require moment
+//= require fullcalendar
+//= require calendar
