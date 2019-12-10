@@ -44,9 +44,11 @@ gem 'draper'
 gem 'enum_help'
 gem 'exception_notification', github: 'smartinez87/exception_notification'
 gem 'font-awesome-sass', '~> 5.2.0'
+gem 'fullcalendar-rails'
 gem 'gmaps4rails'
 gem 'jquery-rails'
 gem 'kaminari'
+gem 'momentjs-rails'
 gem 'pry-byebug'
 gem 'pry-doc'    # methodを表示
 gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
@@ -57,8 +59,6 @@ gem 'rubocop-rails'
 gem 'slack-notifier'
 gem 'slim-rails'
 gem 'sorcery'
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

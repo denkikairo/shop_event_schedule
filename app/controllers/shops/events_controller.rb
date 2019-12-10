@@ -1,12 +1,13 @@
+# frozen_string_literal: true
+
 class Shops::EventsController < Shops::BaseController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: %i[show edit update destroy]
 
   def index
     @events = Event.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @event = Event.new
@@ -34,11 +35,11 @@ class Shops::EventsController < Shops::BaseController
 
   private
 
-    def set_event
-      @event = Event.find(params[:id])
-    end
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-    def event_params
-      params.require(:event).permit(:title, :start_time, :end_time)
-    end
+  def event_params
+    params.require(:event).permit(:title, :start_time, :end_time)
+  end
 end
