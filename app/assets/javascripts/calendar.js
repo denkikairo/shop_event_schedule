@@ -4,6 +4,7 @@ $('#calendar').fullCalendar({
     events: '/shops/events.json',
     timeFormat: 'H:mm',
     eventColor: '#63ceef',
+    lang: 'ja',
     dayClick: function (start, end, jsEvent, view) {
       //クリックした日付情報を取得
       const year = moment(start).year();
