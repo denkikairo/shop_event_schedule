@@ -17,15 +17,15 @@ $('#calendar').fullCalendar({
         //イベント登録用のhtmlを作成
         $('.modal-body').html(res);
         //イベント登録フォームの日付をクリックした日付とする
-        $("#event_start_time_1i").val(year);
-        $("#event_start_time_2i").val(month);
-        $("#event_start_time_3i").val(day);
+        $('#event_start_time_1i').val(year);
+        $('#event_start_time_2i').val(month);
+        $('#event_start_time_3i').val(day);
         //イベント登録フォームのモーダル表示
         $('#modal').modal();
         // 成功処理
       }).fail(function (result) {
         // 失敗処理
-        alert("failure")
+        alert('エラーが発生しました。運営に問い合わせてください。')
       });
     },
     eventClick: function(calEvent, jsEvent, view) {
@@ -39,7 +39,7 @@ $('#calendar').fullCalendar({
         $('#modal').modal();
       }).fail(function (result) {
         // 失敗処理
-        alert("failure")
+        alert('エラーが発生しました。運営に問い合わせてください。')
       });
     }
   });
