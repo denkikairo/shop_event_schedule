@@ -12,4 +12,4 @@ h1 Edit Event
     = f.text_field :description, class:'form-control mb-3'
   .actions
     = f.submit class: "btn btn-primary mb-3 js-event-create-btn"
-= link_to "Delete", shops_event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger", remote: true
+= link_to "Delete", shops_event_path(@event), method: :delete, class:"btn btn-danger", remote: true
