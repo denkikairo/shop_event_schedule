@@ -13,5 +13,4 @@ Rails.application.routes.draw do
   namespace :shops do
     resource :info, only: %i[show edit update]
     resources :events
-22end
 end
