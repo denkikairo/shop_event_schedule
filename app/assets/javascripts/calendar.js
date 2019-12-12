@@ -21,7 +21,7 @@ $('#calendar').fullCalendar({
         $("#event_start_time_2i").val(month);
         $("#event_start_time_3i").val(day);
         //イベント登録フォームのモーダル表示
-        $('#exampleModal').modal();
+        $('#modal').modal();
         // 成功処理
       }).fail(function (result) {
         // 失敗処理
@@ -36,7 +36,7 @@ $('#calendar').fullCalendar({
       }).done(function (res) {
         //イベント編集用のhtmlを作成
         $('.modal-body').html(res);
-        $('#exampleModal').modal();
+        $('#modal').modal();
       }).fail(function (result) {
         // 失敗処理
         alert("failure")
