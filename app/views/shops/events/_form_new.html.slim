@@ -9,6 +9,6 @@ h1 Create New Event
       = f.datetime_select :start_time, {default: Date.today + 19.hours + 00.minutes, minute_step: 10}, class:'form-controlp form-control-inline mb-3'
   .form-group
     = f.label :description
-    = f.text_field :description, class:'form-control mb-3'
+    = f.text_area :description, class:'form-control mb-3'
   .actions
     = f.submit class: "btn btn-primary mb-3 js-event-create-btn"
