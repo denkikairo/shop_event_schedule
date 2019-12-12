@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_12_040927) do
+ActiveRecord::Schema.define(version: 2019_11_28_072818) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.datetime "start_time", null: false
+    t.text "description"
     t.bigint "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "description"
     t.index ["shop_id"], name: "index_events_on_shop_id"
   end
 
