@@ -36,7 +36,7 @@ class Shops::EventsController < Shops::BaseController
   private
 
   def set_event
-    @event = Event.find(params[:id])
+    @event = current_shop.events.find(params[:id])
   end
 
   def event_params
