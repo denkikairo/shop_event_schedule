@@ -20,9 +20,6 @@ $('#calendar').fullCalendar({
         $("#event_start_time_1i").val(year);
         $("#event_start_time_2i").val(month);
         $("#event_start_time_3i").val(day);
-        $("#event_end_time_1i").val(year);
-        $("#event_end_time_2i").val(month);
-        $("#event_end_time_3i").val(day);
         //イベント登録フォームのモーダル表示
         $('#exampleModal').modal();
         // 成功処理

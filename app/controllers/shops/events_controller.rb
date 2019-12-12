@@ -40,6 +40,6 @@ class Shops::EventsController < Shops::BaseController
   end
 
   def event_params
-    params.require(:event).permit(:title, :start_time, :end_time)
+    params.require(:event).permit(:title, :start_time, :description)
   end
 end
