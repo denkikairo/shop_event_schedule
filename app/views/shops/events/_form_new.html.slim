@@ -1,5 +1,5 @@
 h1 Create New Event
-= form_with model: @event, url: shops_events_path do |f|
+= form_with model: event, url: shops_events_path do |f|
   = render "devise/shared/error_messages", resource: f.object
   .form-group
     = f.label :title
