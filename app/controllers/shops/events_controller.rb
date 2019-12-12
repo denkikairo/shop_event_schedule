@@ -20,7 +20,7 @@ class Shops::EventsController < Shops::BaseController
 
   def create
     @event = current_shop.events.build(event_params)
-    @event.update(event_params)
+    @event.save
   end
 
   # PATCH/PUT /events/1
