@@ -4,7 +4,7 @@ class Shops::EventsController < Shops::BaseController
   before_action :set_event, only: %i[show edit update destroy]
 
   def index
-    @events = Event.all
+    @events = current_shop.events
   end
 
   def show; end
