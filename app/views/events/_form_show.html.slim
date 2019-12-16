@@ -1,0 +1,17 @@
+h1.float-left.mb-5 イベント情報
+table.table.mb-3.event-table
+  tr
+    th scope="row" width='130' = t('activerecord.attributes.event.title')
+    td= @event.title
+  tr
+    th scope="row" = t('activerecord.attributes.event.start_time')
+    td = l(@event.start_time, format: :short)
+  tr
+    th scope="row" = t('activerecord.attributes.event.description')
+    td = @event.description
+  tr
+    th scope="row" = t('activerecord.attributes.shop.name')
+    td = @event.shop.name
+  tr
+    th scope="row" = t('activerecord.attributes.shop.address')
+    td = @event.shop.address
