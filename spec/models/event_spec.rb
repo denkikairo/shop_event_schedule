@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Shop, type: :model do
+RSpec.describe Event, type: :model do
   let(:event_no_title) { build(:event, title: '') }
   let(:event_no_start_time) { build(:event, start_time: '') }
 
