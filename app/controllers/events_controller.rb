@@ -9,6 +9,10 @@ class EventsController < ApplicationController
     render plain: render_to_string(partial: 'form_show', layout: false, locals: { event: @event })
   end
 
+  def bookmarks
+    @bookmark_events = current_player.bookmark_events
+  end
+
   private
 
   def set_event
