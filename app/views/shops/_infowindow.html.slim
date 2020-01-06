@@ -1,4 +1,5 @@
 h1
   font size="4" = link_to shop.name, shops_info_path(shop)
 .row.mb-3
+  #CalendarIndex
 = link_to "拡大地図を表示", "https://maps.google.co.jp/maps?q=loc:#{shop.latitude}, #{shop.longitude}&iwloc=J", target: "_blank"

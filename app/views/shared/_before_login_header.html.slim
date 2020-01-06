@@ -7,5 +7,7 @@ body
         span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.ml-auto.main-nav.align-items-center
+          li.nav-item.m-3
+            = link_to "ショップ一覧", shops_path
           li.nav-item
             = link_to "ログイン", new_player_session_path, class:"nav-link"

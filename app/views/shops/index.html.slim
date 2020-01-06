@@ -1,19 +1,23 @@
-h1 Listing shops
-table
-  tr
-    th Shop ID
-    th Shop Email
-    th
-    th
-    th
-  - @shops.each do |shop|
-    tr
-      td= shop.id
-      td= shop.email
-br/
-- if shop_signed_in?
-	= link_to "Logout", destroy_shop_session_path, method: :delete
-- else
-	= link_to "Signup", new_shop_registration_path
-	br
-	= link_to "Login", new_shop_session_path
+- content_for(:html_title, 'ショップ一覧')
+/! Content Header (Page header)
+.content-header
+  .container-fluid
+    .row.mb-2
+      .col-sm-6
+        h1.m-0.text-dark ショップ一覧
+.container.pt-3
+  .row
+    .col-lg-10.offset-lg-1
+      /! 検索フォーム
+      /= render 'shops_search_form', q: @q, url: admin_shops_path
+  - if @shops.empty?
+    = 'ショップがありません'
+  - else
+    table.table.table-striped
+      thead
+        tr
+          th scope="col" = t('activerecord.attributes.shop.name')
+          th scope="col" = t('activerecord.attributes.shop.address')
+      tbody
+        = render partial: "shop", collection: @shops
+  /= paginate @shops
