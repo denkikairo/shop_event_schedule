@@ -3,6 +3,7 @@ ja:
     models:
       shop: ショップ
       event: イベント
+      player: ユーザー
     attributes:
       shop:
         id: ID
@@ -22,3 +23,10 @@ ja:
         title: イベント名
         start_time: 開始時間
         description: イベント説明
+      player:
+        id: ID
+        created_at: 作成日時
+        updated_at: 更新日時
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード再入力

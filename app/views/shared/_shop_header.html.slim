@@ -1,0 +1,14 @@
+body
+  header
+    nav.navbar.navbar-expand-lg.navigation.navbar-light.bg-light
+      = link_to "MTGドラフトをやろう", root_path, class:"navbar-brand"
+      button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse"
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto.main-nav.align-items-center
+          li.nav-item.m-3
+            = link_to "登録情報", shops_info_path
+          li.nav-item.m-3
+            = link_to "イベント登録", shops_events_path
+          li.nav-item
+            = link_to "ログアウト", destroy_shop_session_path, method: :delete

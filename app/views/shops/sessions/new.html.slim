@@ -1,12 +1,12 @@
 h2
-  | Log in
+  | ショップとしてログイン
 = form_with model: @shop, url: shop_session_path, id: 'new_shop', class: 'new_shop', local: true do |f|
   .field
-    = f.label :email
+    = f.label :email, t('activerecord.attributes.shop.email')
     br
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
-    = f.label :password
+    = f.label :password, t('activerecord.attributes.shop.password')
     br
     = f.password_field :password, autocomplete: "current-password"
   - if devise_mapping.rememberable?
