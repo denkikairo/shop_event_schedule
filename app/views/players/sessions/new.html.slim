@@ -1,7 +1,7 @@
 - content_for(:html_title, 'ログイン')
 .container
   .row
-    .col-md-10.offset-md-1
+    .col-md-10.offset-md-1.col-lg-8.offset-lg-2
       h2 ログイン
       = form_with model: @player, url: player_session_path, id: 'new_player', class: 'new_player', local: true do |f|
         .form-group
@@ -13,9 +13,10 @@
           br
           = f.password_field :password, autocomplete: "current-password", class:'form-control mb-3'
         - if devise_mapping.rememberable?
-          .form-group
-            = f.check_box :remember_me
-            = f.label :remember_me
+          .form-group.form-check
+            = f.check_box :remember_me, class: 'form-check-input'
+            = f.label :remember_me, class: 'form-check-label' do
+              | ログインを保持
         .actions
-          = f.submit "Log in", class: "btn btn-primary mb-3"
+          = f.submit "ログイン", class: "btn btn-primary mb-3"
       = render "players/shared/links"
