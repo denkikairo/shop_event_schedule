@@ -45,4 +45,29 @@ $('#calendar').fullCalendar({
     }
   });
 
+$('#CalendarIndex').fullCalendar({
+    events: '/events.json',
+    timeFormat: 'H:mm',
+    eventColor: '#63ceef',
+    lang: 'ja',
+    eventClick: function(calEvent, jsEvent, view) {
+      //イベント編集のためeditアクションを発火
+      $.ajax({
+        type: 'GET',
+        url: '/events/' + calEvent.id
+      }).done(function (res) {
+        //イベント編集用のhtmlを作成
+        $('.modal-body').html(res);
+        $('#modal').modal();
+      }).fail(function (result) {
+        // 失敗処理
+        alert('エラーが発生しました。運営に問い合わせてください。')
+      });
+    },
+    eventRender: function(event, $element) {
+        var titleStr = $element.find('span.fc-title').text(), // htmlタグを含むtitleの文字列を取得
+        $eventElem = $element.find('span.fc-title');
+        $eventElem.html(titleStr); // htmlとして出力
+    }
+})
 });

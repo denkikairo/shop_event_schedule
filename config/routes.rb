@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   root to: 'shops#index'
   resources :shops, only: %i[index]
+  resources :events, only: %i[show index]
 
   namespace :shops do
     resource :info, only: %i[show edit update]
