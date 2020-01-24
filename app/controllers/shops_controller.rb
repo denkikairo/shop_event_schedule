@@ -2,6 +2,7 @@
 
 class ShopsController < ApplicationController
   before_action :set_shop, only: %i[show events]
+
   def index
     @shops = Shop.all
   end
