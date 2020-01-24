@@ -96,5 +96,5 @@ $('#CalendarBookmarks').fullCalendar({
         $eventElem = $element.find('span.fc-title');
         $eventElem.html(titleStr); // htmlとして出力
     }
-})
+  })
 });

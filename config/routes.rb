@@ -13,16 +13,23 @@ Rails.application.routes.draw do
   }
 
   root to: 'events#index'
-  resources :shops, only: %i[index]
-  resources :events, only: %i[show index], shallow: true do
-    collection do
-      get :bookmarks
-    end
-  end
-  resources :bookmarks, only: %i[create destroy]
 
   namespace :shops do
     resource :info, only: %i[show edit update]
     resources :events
   end
+
+  resources :shops, only: %i[show index] do
+    member do
+      get :events
+    end
+  end
+
+  resources :events, only: %i[show index], shallow: true do
+    collection do
+      get :bookmarks
+    end
+  end
+
+  resources :bookmarks, only: %i[create destroy]
 end
