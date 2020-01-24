@@ -10,7 +10,8 @@ RSpec.describe 'Events', type: :system do
       it 'イベント登録が成功すること', js: true do
         login_as(shop)
         visit shops_events_path
-        find('.fc-day-top[data-date="2019-12-06"]').click
+        today = Date.today.strftime("%Y-%m-%d")
+        find(".fc-day-top[data-date=\"#{today}\"]").click
         fill_in 'event_title', with: 'Event Title'
         expect {
           click_button '登録する'
