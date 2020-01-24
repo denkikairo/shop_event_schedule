@@ -7,7 +7,12 @@ Rails.application.routes.draw do
     sessions: 'shops/sessions'
   }
 
-  root to: 'shops#index'
+  devise_for :players, controllers: {
+    registrations: 'players/registrations',
+    sessions: 'players/sessions'
+  }
+
+  root to: 'events#index'
   resources :shops, only: %i[index]
   resources :events, only: %i[show index]
 
