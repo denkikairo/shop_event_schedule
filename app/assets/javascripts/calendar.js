@@ -94,11 +94,8 @@ $('#CalendarBookmarks').fullCalendar({
       });
     },
     eventRender: function(event, $element) {
-      console.log("aaaa")
         var titleStr = $element.find('span.fc-title').text(), // htmlタグを含むtitleの文字列を取得
-        // console.log(titleStr)
         $eventElem = $element.find('span.fc-title');
-
         $eventElem.html(titleStr); // htmlとして出力
     }
 })

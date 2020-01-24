@@ -14,7 +14,6 @@ $(function() {
     } else {
       var myLatLng = {lat: Number($('#shop_latitude').val()), lng: Number($('#shop_longitude').val())};
     }
-    console.log(myLatLng)
 
     const map = new google.maps.Map(document.getElementById('edit_map_info'), {
       zoom: 16,
