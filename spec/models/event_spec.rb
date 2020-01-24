@@ -9,7 +9,6 @@ RSpec.describe Event, type: :model do
   describe 'validates title' do
     context 'no title' do
       it 'is invalid' do
-        event_no_title
         expect(event_no_title).not_to be_valid
       end
     end
@@ -17,7 +16,6 @@ RSpec.describe Event, type: :model do
   describe 'validates start_time' do
     context 'no start_time' do
       it 'is invalid' do
-        event_no_start_time
         expect(event_no_start_time).not_to be_valid
       end
     end
