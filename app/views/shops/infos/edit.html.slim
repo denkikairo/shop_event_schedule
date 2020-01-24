@@ -3,7 +3,7 @@
     .col-md-10.offset-md-1
       h1 Edit shop info
       = javascript_include_tag 'edit_map_info.js'
-      input#autocomplete.mb-3 type='text' /
+      input#autocomplete.mb-3 type='text' size='90' /
       #edit_map_info.mb-3 style='width: 800px; height: 400px;', class:'mb-3'
       = form_with model: @shop, url: shops_info_path, local: true do |f|
         = render 'devise/shared/error_messages', resource: f.object

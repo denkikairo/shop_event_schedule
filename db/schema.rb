@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_062741) do
+ActiveRecord::Schema.define(version: 2019_11_28_072818) do
+
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "start_time", null: false
+    t.text "description"
+    t.bigint "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_events_on_shop_id"
+  end
 
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +38,5 @@ ActiveRecord::Schema.define(version: 2019_11_25_062741) do
     t.index ["reset_password_token"], name: "index_shops_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "shops"
 end

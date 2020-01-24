@@ -15,9 +15,9 @@ class Shops::InfosController < Shops::BaseController
 
   def update
     if @shop.update(shop_params)
-      redirect_to shops_info_path, success: 'Shop info was updated.'
+      redirect_to shops_info_path, success: 'ショップ情報が更新されました'
     else
-      flash.now[:danger] = 'Update was failed.'
+      flash.now[:danger] = 'ショップ情報の更新に失敗しました'
       render :edit
     end
   end

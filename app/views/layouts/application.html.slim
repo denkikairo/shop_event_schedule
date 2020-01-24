@@ -13,3 +13,15 @@ html
   body
     = render 'shared/flash_messages'
     = yield
+    /! Modal
+    #modal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1"
+      .modal-dialog role="document"
+        .modal-content
+          .modal-header
+            h5#modalLabel.modal-title
+            button.close aria-label="Close" data-dismiss="modal" type="button"
+              span aria-hidden="true"  ×
+          #exampleBody.modal-body
+            | \...
+          .modal-footer
+            button.btn.btn-secondary data-dismiss="modal" type="button"  Close
