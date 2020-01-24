@@ -1,0 +1,5 @@
+div id="bookmark_form-#{event.id}"
+  - if current_player.bookmark_event?(event)
+    = render 'bookmarks/unbookmark', event: event
+  - else
+    = render 'bookmarks/bookmark', event: event
