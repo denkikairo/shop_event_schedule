@@ -2,23 +2,23 @@
 .container.pt-3
   .row
     .col-md-10.offset-md-1
-      h1.float-left.mb-5 Shop Info
+      h1.float-left.mb-5 ショップ情報
       = link_to 'Edit', edit_shops_info_path, class:'btn btn-success float-right mt-3'
       table.table.mb-3
         tr
-          th scope='row' Email
+          th scope='row' = t('activerecord.attributes.shop.email')
           td= current_shop.email
         tr
-          th scope='row' Name
+          th scope='row' = t('activerecord.attributes.shop.name')
           td= current_shop.name
         tr
-          th scope='row' Latitude
+          th scope='row' = t('activerecord.attributes.shop.latitude')
           td = current_shop.latitude
         tr
-          th scope='row' Longitude
+          th scope='row' = t('activerecord.attributes.shop.longitude')
           td = current_shop.longitude
         tr
-          th scope='row' Address
+          th scope='row' = t('activerecord.attributes.shop.address')
           td= current_shop.address
       #map.mb-3 style='width: 800px; height: 400px;'
 
