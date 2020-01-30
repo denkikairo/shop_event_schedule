@@ -12,7 +12,7 @@ RSpec.describe 'Shops', type: :system do
         fill_in 'shop_email', with: 'example@example.com'
         fill_in 'shop_password', with: 'password'
         fill_in 'shop_password_confirmation', with: 'password'
-        click_button 'Sign up'
+        click_button '登録'
         expect(page).to have_content 'アカウント登録が完了しました。'
         expect(current_path).to eq edit_shops_info_path
       end
@@ -23,7 +23,7 @@ RSpec.describe 'Shops', type: :system do
       it 'ログインが成功すること' do
         login_as(shop)
         expect(page).to have_content 'ログインしました。'
-        expect(current_path).to eq shops_info_path
+        expect(current_path).to eq shops_events_path
       end
     end
   end
@@ -31,6 +31,7 @@ RSpec.describe 'Shops', type: :system do
     context '入力値が正常な状態' do
       it 'ShopInfoの更新が成功すること' do
         login_as(shop)
+        visit shops_info_path
         click_link 'Edit'
         fill_in 'shop_email', with: shop.email
         fill_in 'shop_name', with: shop.name
