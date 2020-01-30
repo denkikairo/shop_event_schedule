@@ -2,14 +2,14 @@
 .container
   .row
     .col-md-10.offset-md-1.col-lg-8.offset-lg-2
-      h2 ショップとしてログイン
-      = form_with model: @shop, url: shop_session_path, id: 'new_shop', class: 'new_shop', local: true do |f|
+      h2 ログイン
+      = form_with model: @player, url: player_session_path, id: 'new_player', class: 'new_player', local: true do |f|
         .form-group
-          = f.label :email, t('activerecord.attributes.shop.email')
+          = f.label :email, t('activerecord.attributes.player.email')
           br
           = f.email_field :email, autofocus: true, autocomplete: "email", class:'form-control mb-3'
         .form-group
-          = f.label :password, t('activerecord.attributes.shop.password')
+          = f.label :password, t('activerecord.attributes.player.password')
           br
           = f.password_field :password, autocomplete: "current-password", class:'form-control mb-3'
         - if devise_mapping.rememberable?
@@ -19,4 +19,4 @@
               | ログインを保持
         .actions
           = f.submit "ログイン", class: "btn btn-primary mb-3"
-      = render "shops/shared/links"
+      = render "players/shared/links"

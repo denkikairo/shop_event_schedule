@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     return root_path unless resource_or_scope.is_a?(Shop)
 
     if resource_or_scope.latitude.present? && resource_or_scope.longitude.present?
-      shops_info_path
+      shops_events_path
     else
       edit_shops_info_path
     end
