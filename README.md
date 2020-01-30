@@ -39,3 +39,8 @@ Google Map Platformにアクセスし、アカウント登録し、請求情報�
 htmlにGoogle Maps用のScriptを読み込むコードを記入する。  
 そのコードに key={APIキー}を追加する。
 
+## Configuration
+ファイルの中身はご自身の環境に合わせて適宜変更してください
+- データベースの設定
+
+`$ cp config/database.yml.default config/database.yml`
